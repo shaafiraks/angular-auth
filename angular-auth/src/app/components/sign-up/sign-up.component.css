@@ -1,0 +1,16 @@
+.btn-form {
+  /* position: absolute; */
+  height: 40px;
+  width: 377px;
+  left: 450px;
+  top: 215px;
+  margin-top: 15px;
+  border-color: black;
+  border-radius: 5px;
+  border-width: 1px;
+}
+
+.text-add {
+  border-end-end-radius: 0px;
+  border-start-end-radius: 0px;
+}

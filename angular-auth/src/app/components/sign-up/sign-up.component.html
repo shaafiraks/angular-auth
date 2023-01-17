@@ -1,0 +1,80 @@
+<div class="displayTable">
+  <div
+    class="displayTableCell position-absolute top-50 start-50 translate-middle"
+  >
+    <div class="authBlock text-center col-md-12">
+      <h3 class="text-center">Sign Up</h3>
+      <div class="formGroup">
+        <input
+          type="email"
+          class="formControl btn-form input-lg"
+          placeholder="Email Address"
+          #userEmail
+          required
+        />
+      </div>
+      <div class="formGroup">
+        <input
+          type="password"
+          class="formControl btn-form input-lg"
+          placeholder="Password"
+          #userPwd
+          required
+        />
+      </div>
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text text-add">@</div>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          id="inlineFormInputGroup"
+          placeholder="Username"
+        />
+      </div>
+      <div class="input-group mb-2 formGroup">
+        <div class="input-group-prepend">
+          <div class="input-group-text text-add">@</div>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          id="inlineFormInputGroup"
+          placeholder="Username"
+        />
+      </div>
+      <div class="formGroup">
+        <input
+          type="button"
+          class="btn btnPrimary"
+          value="Create Your Account"
+          (click)="authService.SignUp(userEmail.value, userPwd.value)"
+        />
+      </div>
+      <div class="col-auto">
+        <label class="sr-only" for="inlineFormInputGroup">Username</label>
+      </div>
+      <div class="formGroup">
+        <span class="or"><span class="orInner">Or</span></span>
+      </div>
+      <!-- Continue with Google -->
+      <div class="formGroup">
+        <button
+          type="button"
+          class="btn googleBtn"
+          (click)="authService.GoogleAuth()"
+        >
+          <i class="fab fa-google-plus-g"></i>
+          Continue with Google
+        </button>
+      </div>
+    </div>
+    <div class="redirectToLogin text-center">
+      <span
+        >Already have an account?
+        <span class="redirect" routerLink="/sign-in">Log In</span></span
+      >
+    </div>
+  </div>
+</div>

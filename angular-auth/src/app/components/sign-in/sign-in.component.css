@@ -1,0 +1,49 @@
+.body {
+  background: #182e7c;
+}
+.btn-form {
+  /* position: absolute; */
+  width: 755px;
+  height: 34px;
+  left: 262px;
+  top: 199px;
+  left: 262px;
+  top: 199px;
+  margin-top: 15px;
+  border-color: black;
+}
+
+.btn-login {
+  text-align: center;
+  width: 755px;
+  height: 34px;
+  left: 262px;
+  top: 199px;
+  font-size: 14px;
+  background-color: #a1c3d2;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.btn-login-google {
+  text-align: center;
+  width: 755px;
+  height: 34px;
+  left: 262px;
+  top: 199px;
+  font-size: 14px;
+  background-color: #ffc564;
+  margin-bottom: 15px;
+}
+
+.btn-forgot {
+  color: #182e7c;
+  text-align: end;
+  margin-top: 15px;
+}
+
+.text-or {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
