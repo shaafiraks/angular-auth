@@ -1,0 +1,26 @@
+body {
+  background-color: #cdf664;
+  background-image: url(../../../assets/images/group-pink.svg);
+  background-repeat: no-repeat;
+  background-position: 0px 170px;
+  background-size: 100% 100%;
+}
+
+.card {
+  padding: 30px;
+  width: 400px;
+}
+
+.content-card {
+  justify-content: center;
+}
+
+.btn-resend {
+  font-size: 18px;
+  background-color: #a1c3d2;
+  margin-bottom: 10px;
+}
+
+.paragraph-sty {
+  font-size: 14px;
+}

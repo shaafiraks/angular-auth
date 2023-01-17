@@ -1,9 +1,13 @@
-.body {
-  background: #182e7c;
+body {
+  background-color: #cdf664;
+  background-image: url(../../../assets/images/group-pink.svg);
+  background-repeat: no-repeat;
+  background-position: 0px 170px;
+  background-size: 100% 100%;
 }
 .btn-form {
   /* position: absolute; */
-  width: 755px;
+  width: 555px;
   height: 34px;
   left: 262px;
   top: 199px;
@@ -15,19 +19,24 @@
 
 .btn-login {
   text-align: center;
-  width: 755px;
+
+  width: 555px;
   height: 34px;
   left: 262px;
   top: 199px;
-  font-size: 14px;
   background-color: #a1c3d2;
   margin-top: 15px;
   margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.text-login {
+  font-size: 14px;
 }
 
 .btn-login-google {
   text-align: center;
-  width: 755px;
+  width: 555px;
   height: 34px;
   left: 262px;
   top: 199px;
@@ -46,4 +55,35 @@
   text-align: center;
   margin-bottom: 15px;
   font-size: 14px;
+}
+
+.card {
+  padding: 30px;
+  width: 1000px;
+}
+
+.img-girl {
+  height: 200px;
+  margin-top: 20px;
+}
+.content-right {
+  justify-content: center;
+}
+
+.text-desc {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.gambar {
+  /* background-color: #182e7c; */
+  padding-left: 50px;
+}
+
+.logo-google {
+  height: 22px;
+  width: 22px;
+  left: 556px;
+  top: 636px;
+  border-radius: 0px;
 }

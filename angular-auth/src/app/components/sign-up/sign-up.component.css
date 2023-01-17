@@ -1,3 +1,10 @@
+body {
+  background-color: #cdf664;
+  background-image: url(../../../assets/images/group-pink.svg);
+  background-repeat: no-repeat;
+  background-position: 0px 150px;
+  background-size: 100% 100%;
+}
 .btn-form {
   /* position: absolute; */
   height: 40px;
@@ -10,7 +17,47 @@
   border-width: 1px;
 }
 
-.text-add {
+.input-all {
+  width: 377px;
+}
+
+.text-or {
+  margin-bottom: 15px;
+}
+
+.btn-signup {
+  text-align: center;
+  width: 377px;
+  height: 34px;
+  left: 262px;
+  top: 199px;
+  font-size: 14px;
+  background-color: #a1c3d2;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.btn-login-google {
+  text-align: center;
+  width: 377px;
+  height: 34px;
+  left: 262px;
+  top: 199px;
+  font-size: 14px;
+  background-color: #ffc564;
+  margin-bottom: 15px;
+}
+
+.logo-sign {
+  height: 38px;
   border-end-end-radius: 0px;
   border-start-end-radius: 0px;
+}
+
+.logo-google {
+  height: 22px;
+  width: 22px;
+  left: 556px;
+  top: 636px;
+  border-radius: 0px;
 }
