@@ -1,12 +1,13 @@
+<router-outlet></router-outlet>
 <!-- Top navigation -->
-<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-  <!-- <a class="navbar-brand col-sm-3 col-md-2 mr-0">
+<nav class="navbar navbar-dark bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-sm-3 col-md-2 mr-0">
     <img
       class="brand-logo"
       src="assets/logo-positronx-white.svg"
       alt="positronX.io Logo"
     />
-  </a> -->
+  </a>
 </nav>
 <!-- Sidebar navigation -->
 <body>
@@ -21,6 +22,24 @@
             <li class="nav-item">
               <a class="nav-link active" style="color: black !important">
                 <i class="fas fa-user"></i>User Profile
+              </a>
+            </li>
+            <li>
+              <a
+                class="nav-link active"
+                routerLink="/register-student"
+                routerLinkActive="active"
+              >
+                <i class="uil uil-user-circle"></i>Add Student
+              </a>
+            </li>
+            <li>
+              <a
+                class="nav-link active"
+                routerLink="/view-students"
+                routerLinkActive="active"
+              >
+                <i class="uil uil-user-circle"></i>Student List
               </a>
             </li>
             <!-- Calling SignOut() Api from AuthService -->
