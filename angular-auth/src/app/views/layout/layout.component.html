@@ -1,0 +1,179 @@
+<nav
+  class="navbar navbar-light bg-light sticky-top flex-md-nowrap d-flex justify-content-between flex-wrap"
+>
+  <div class="logo">LINGO<span style="color: grey">Learn</span></div>
+  <ul class="nav-links">
+    <div class="menu">
+      <li class="profile">
+        <div style="float: right">
+          <div class="row" *ngIf="authService.userData as user">
+            <div class="col-md-4">
+              <a class="media" type="button">
+                <img
+                  class="align-self-start rounded-circle"
+                  src="{{
+                    user.photoURL ? user.photoURL : '/assets/dummy-user.png'
+                  }}"
+                  alt="{{ user.displayName }}"
+                  style="width: 40px; height: 40px; margin: 5px"
+                />
+              </a>
+            </div>
+            <!-- <div class="col-md-8">
+          <div class="mdia-body">
+            <span style="color: #ef5da8">Profile</span>
+          </div>
+        </div> -->
+          </div>
+        </div>
+        <ul class="dropdown" aria-labelledby="dropdownMenuButton1">
+          <li>
+            <a
+              class="dropdown-item active"
+              routerLink="/dashboard"
+              routerLinkActive="active"
+              style="color: black !important"
+            >
+              <i class="fas fa-user"></i>User Profile
+            </a>
+          </li>
+          <li>
+            <a
+              type="button"
+              class="dropdown-item"
+              (click)="authService.SignOut()"
+              style="color: black !important"
+            >
+              <i class="fas fa-sign-out-alt"></i>Log out
+            </a>
+          </li>
+        </ul>
+      </li>
+    </div>
+  </ul>
+</nav>
+<!-- Sidebar navigation -->
+<body>
+  <div class="container-fluid">
+    <div class="sidebar-nav">
+      <div class="row">
+        <nav
+          class="col-md-2 d-md-block sidebar"
+          style="background-color: #fcdded; margin-top: 40px"
+        >
+          <div class="sidebar sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  routerLink="/dashboard"
+                  routerLinkActive="active"
+                  style="color: black !important"
+                >
+                  <i class="bi bi-person"></i>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-person"
+                    viewBox="0 0 16 16"
+                    style="margin-right: 5px"
+                  >
+                    <path
+                      d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"
+                    /></svg
+                  >User Profile
+                </a>
+              </li>
+              <li>
+                <a
+                  type="button"
+                  class="nav-link active"
+                  routerLink="/register-student"
+                  routerLinkActive="active"
+                >
+                  <i class="bi bi-person-add"></i>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-person-add"
+                    viewBox="0 0 16 16"
+                    style="margin-right: 5px"
+                  >
+                    <path
+                      d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
+                    />
+                    <path
+                      d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"
+                    /></svg
+                  >Add Student
+                </a>
+              </li>
+              <li>
+                <a
+                  class="nav-link active"
+                  routerLink="/view-students"
+                  routerLinkActive="active"
+                >
+                  <i class="bi bi-person-lines-fill"></i>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-person-lines-fill"
+                    viewBox="0 0 16 16"
+                    style="margin-right: 5px"
+                  >
+                    <path
+                      d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"
+                    />
+                  </svg>
+                  Student List
+                </a>
+              </li>
+              <!-- Calling SignOut() Api from AuthService -->
+              <li class="nav-item">
+                <a
+                  type="button"
+                  class="nav-link"
+                  (click)="authService.SignOut()"
+                  style="color: black !important"
+                >
+                  <i class="bi bi-box-arrow-right"></i>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-box-arrow-right"
+                    viewBox="0 0 16 16"
+                    style="margin-right: 5px"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"
+                    /></svg
+                  >Log out
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- Main content -->
+        <main class="main col-md-9 ml-md-auto col-lg-10 px-4">
+          <div class="router-style">
+            <router-outlet></router-outlet>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+</body>

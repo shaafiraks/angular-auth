@@ -29,6 +29,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // NGX Pagination
 import { NgxPaginationModule } from 'ngx-pagination';
 import { RouterModule } from '@angular/router';
+import { LayoutComponent } from './views/layout/layout.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { RouterModule } from '@angular/router';
     StudentListComponent,
     AppComponent,
     DashboardComponent,
+    LayoutComponent,
   ],
   imports: [
     BrowserModule,

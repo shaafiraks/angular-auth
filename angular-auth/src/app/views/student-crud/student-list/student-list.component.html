@@ -1,135 +1,64 @@
-<nav class="navbar navbar-dark bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-sm-3 col-md-2 mr-0">
-    <img
-      class="brand-logo"
-      src="assets/logo-positronx-white.svg"
-      alt="positronX.io Logo"
-    />
+<div
+  class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+>
+  <h2 class="h2">Students List</h2>
+  <a
+    routerLink="/register-student"
+    class="btn btn-success"
+    *ngIf="hideWhenNoStudent"
+  >
+    Add Student
   </a>
-</nav>
-<!-- Sidebar navigation -->
-<body>
-  <div class="container-fluid">
-    <div class="row">
-      <nav
-        class="col-md-2 d-md-block sidebar"
-        style="background-color: #fcdded"
-      >
-        <div class="sidebar-sticky">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active" style="color: black !important">
-                <i class="fas fa-user"></i>User Profile
-              </a>
-            </li>
-            <li>
-              <a
-                class="nav-link active"
-                routerLink="/register-student"
-                routerLinkActive="active"
-              >
-                <i class="uil uil-user-circle"></i>Add Traveler
-              </a>
-            </li>
-            <li>
-              <a
-                class="nav-link active"
-                routerLink="/view-students"
-                routerLinkActive="active"
-              >
-                <i class="uil uil-user-circle"></i>Traveler List
-              </a>
-            </li>
-            <!-- Calling SignOut() Api from AuthService -->
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                (click)="authService.SignOut()"
-                style="color: black !important"
-              >
-                <i class="fas fa-sign-out-alt"></i>Log out
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <!-- Main content -->
-      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-        <div
-          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
-        >
-          <h2 class="h2">Travelers List</h2>
-          <a
-            routerLink="/register-student"
-            class="btn btn-success"
-            *ngIf="hideWhenNoStudent"
-          >
-            Add Traveler
-          </a>
-        </div>
-        <div class="pricing-header mx-auto">
-          <div class="no-data text-center" *ngIf="preLoader">
-            <img
-              src="assets/preloader.gif"
-              class="preloader-icon"
-              alt="No student"
-            />
-          </div>
-          <div class="no-data text-center" *ngIf="noData">
-            <img
-              src="assets/no-student.svg"
-              class="nodata-msg"
-              alt="No student"
-            />
-            <p class="nodata-msg">No student added yet!</p>
-            <a routerLink="/register-student" class="btn btn-success">
-              Add Student
-            </a>
-          </div>
-          <div class="table-responsive" *ngIf="hideWhenNoStudent">
-            <table
-              class="table table-bordered table-responsive-sm table-responsive-md table-responsive-lg"
-            >
-              <thead>
-                <tr>
-                  <th scope="col">Traveler Id</th>
-                  <th scope="col">Traveler name</th>
-                  <th scope="col">Email</th>
-                  <th scope="col">Mobile number</th>
-                  <th class="text-center" scope="col">Edit</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr
-                  *ngFor="
-                    let student of Student
-                      | paginate : { itemsPerPage: 8, currentPage: p };
-                    let i = index
-                  "
-                >
-                  <th scope="row">{{ student.$key }}</th>
-                  <td>{{ student.firstName }} {{ student.lastName }}</td>
-                  <td>{{ student.email }}</td>
-                  <td>{{ student.mobileNumber }}</td>
-                  <td class="text-center action-block">
-                    <span
-                      class="mr-2 btn btn-outline-primary btn-sm"
-                      routerLink="/edit-student/{{ student.$key }}"
-                      >Edit</span
-                    >
-                    <span
-                      class="btn btn-outline-danger btn-sm"
-                      (click)="deleteStudent(student)"
-                      >Delete</span
-                    >
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <pagination-controls (pageChange)="p = $event"></pagination-controls>
-        </div>
-      </main>
-    </div>
+</div>
+<div class="pricing-header mx-auto">
+  <div class="no-data text-center" *ngIf="preLoader">
+    <img src="assets/preloader.gif" class="preloader-icon" alt="No student" />
   </div>
-</body>
+  <div class="no-data text-center" *ngIf="noData">
+    <img src="assets/no-student.svg" class="nodata-msg" alt="No student" />
+    <p class="nodata-msg">No student added yet!</p>
+    <a routerLink="/register-student" class="btn btn-success"> Add Student </a>
+  </div>
+  <div class="table-responsive" *ngIf="hideWhenNoStudent">
+    <table
+      class="table table-bordered table-responsive-sm table-responsive-md table-responsive-lg"
+    >
+      <thead>
+        <tr>
+          <th scope="col">Student Id</th>
+          <th scope="col">Student Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Mobile number</th>
+          <th class="text-center" scope="col">Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="
+            let student of Student
+              | paginate : { itemsPerPage: 8, currentPage: p };
+            let i = index
+          "
+        >
+          <th scope="row">{{ student.$key }}</th>
+          <td>{{ student.firstName }} {{ student.lastName }}</td>
+          <td>{{ student.email }}</td>
+          <td>{{ student.mobileNumber }}</td>
+          <td class="text-center action-block">
+            <span
+              class="mr-2 btn btn-outline-primary btn-sm"
+              routerLink="/edit-student/{{ student.$key }}"
+              >Edit</span
+            >
+            <span
+              class="btn btn-outline-danger btn-sm"
+              (click)="deleteStudent(student)"
+              >Delete</span
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

@@ -1,0 +1,88 @@
+body {
+  background-color: #cdf664;
+  background-image: url(../../../assets/images/group-pink.svg);
+  background-repeat: no-repeat;
+  background-position: 0px 170px;
+  background-size: 100% 100%;
+}
+
+.sidebar {
+  /* border-radius: 10px; */
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  padding-top: 100px;
+  height: 100vh;
+  padding-right: 0;
+}
+
+.navbar {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 20px;
+
+  background-color: black !important;
+
+  color: #fff;
+}
+
+.logo {
+  font-size: 32px;
+}
+
+.dropdown {
+  background-color: rgb(1, 139, 139);
+
+  padding: 1em 0;
+
+  position: absolute; /*WITH RESPECT TO PARENT*/
+
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+}
+
+.dropdown li + li {
+  margin-top: 10px;
+}
+
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+}
+
+.dropdown li:hover {
+  background-color: #4c9e9e;
+}
+
+.profile:hover .dropdown {
+  display: block;
+}
+.sidebar-sticky {
+  position: absolute;
+  width: 100%;
+}
+
+.body-outlet {
+  margin-left: 15px;
+}
+
+.router-style {
+  background-color: #ffff;
+  width: 100%;
+  padding: 17px;
+  border-radius: 10px;
+}
+.main {
+  margin-top: 40px;
+}
+
+.media {
+  margin-left: 30px;
+  float: left;
+}
