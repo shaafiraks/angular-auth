@@ -82,9 +82,9 @@ input.ng-invalid.ng-touched {
   opacity: 1;
 }
 /* Nav */
-body .navbar {
+/* body .navbar {
   padding: 6px 0 !important;
-}
+} */
 body .navbar-brand {
   background: none;
 }
